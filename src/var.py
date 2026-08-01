@@ -23,7 +23,7 @@ def calculate_expected_shortfall(returns, confidence_level=0.95):
     expected_shortfall = tail_losses.mean()
     return expected_shortfall
 
-
+from plotting import plot_return_distribution
 from returns import load_data, calculate_returns
 
 if __name__ == "__main__":
@@ -43,3 +43,9 @@ if __name__ == "__main__":
 
     print(f"My VaR: {my_var:.6f}")
     print(f"My ES : {my_es:.6f}")
+
+    plot_return_distribution(
+        returns=data["Returns"],
+        var=my_var,
+        expected_shortfall=my_es,
+    )
