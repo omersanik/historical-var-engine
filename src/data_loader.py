@@ -7,10 +7,15 @@ def download_stock_data(ticker, start_date, end_date):
     data = yf.download(
         ticker,
         start_date,
-        end_date
+        end_date,
+        auto_adjust = True,
+        progress=False
     )
-    return data
 
+    if isinstance(data.columns, pd.MultiIndex):
+        data.columns = data.columns.get_level_values(0)
+
+    return data
 
 
 def save_to_csv(data, filepath):
