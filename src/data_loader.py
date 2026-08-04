@@ -25,11 +25,11 @@ def save_to_csv(data, filepath):
     print(f"Data saved to {filepath}")
 
 if __name__ == '__main__':
-    apple = download_stock_data(
+    aapl = download_stock_data(
         ticker='AAPL',
         start_date='2020-01-01',
         end_date='2020-12-31'
     )
 
-    save_to_csv(data=apple, filepath="data/raw/AAPL.csv")
-    print(apple.head())
+    save_to_csv(data=aapl, filepath="data/raw/AAPL.csv")
+    print(aapl.head())
