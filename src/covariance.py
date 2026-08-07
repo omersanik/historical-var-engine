@@ -17,4 +17,3 @@ weight = pd.Series(portfolio).to_numpy()
 covariance_matrix = covariance_matrix.to_numpy()
 
 volatility = calculate_portfolio_volatility(covariance_matrix, weight)
-print(volatility)

@@ -7,4 +7,3 @@ def calculate_correlation_matrix(returns):
 
 portfolio_returns = load_portfolio_returns(portfolio)
 correlation_matrix = calculate_correlation_matrix(portfolio_returns)
-print(correlation_matrix)

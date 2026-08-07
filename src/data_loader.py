@@ -32,4 +32,3 @@ if __name__ == '__main__':
     )
 
     save_to_csv(data=aapl, filepath="data/raw/AAPL.csv")
-    print(aapl.head())

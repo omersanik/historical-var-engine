@@ -24,6 +24,5 @@ rolling = calculate_rolling_var(
     window=20
 )
 plot_rolling_var(rolling)
-print(rolling[:5])
-print(len(rolling))
+
 

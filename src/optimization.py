@@ -15,4 +15,3 @@ weights = pd.Series(portfolio)
 
 portfolio_return = calculate_portfolio_return(expected_return, weights)
 
-print(portfolio_return)
